@@ -28,7 +28,7 @@ main{
 }
 section img{
     grid-area: imagen;
-    width: 100%;;
+    width: 100%;
 }
 footer{
     grid-area: footer;
