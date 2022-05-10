@@ -16,7 +16,7 @@ main{
     grid-template-areas:    "descripcion"
                             "imagen";
 }
-section .presentacion{
+section.presentacion{
     grid-area: descripcion; 
 }
 section img{
