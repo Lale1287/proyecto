@@ -11,7 +11,7 @@ header{
 nav{
     grid-area: menu;
 }
-section{
+main{
     grid-area: contenido;
     grid-template-areas:    "descripcion"
                             "imagen";
