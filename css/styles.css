@@ -2,8 +2,7 @@ body{
     background-color: darksalmon;
     display: grid;
     grid-template-areas:    "header header"
-                            "menu parrafo"
-                            "imagen imagen"
+                            "menu contenido"
                             "footer footer";
 }
 header{
@@ -12,9 +11,13 @@ header{
 nav{
     grid-area: menu;
 }
+section{
+    grid-area: contenido;
+    grid-template-areas:    "descripcion"
+                            "imagen";
+}
 section .presentacion{
-    grid-area: parrafo;
-    grid-template-columns: 1fr 2fr;
+    grid-area: descripcion; 
 }
 section img{
     grid-area: imagen;
