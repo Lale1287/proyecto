@@ -12,9 +12,12 @@ header{
 nav{
     grid-area: menu;
 }
-section{
+section .presentacion{
     grid-area: parrafo;
     grid-template-columns: 1fr 2fr;
+}
+section img{
+    grid-area: imagen;
 }
 footer{
     grid-area: footer;
