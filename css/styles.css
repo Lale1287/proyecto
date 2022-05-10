@@ -9,11 +9,11 @@ body{
 header{
     grid-area: header;
 }
-section .presentacion{
-    grid-area: parrafo;
+nav{
+    grid-area: menu;
 }
-section > img{
-    grid-area: imagen;
+section{
+    grid-area: parrafo;
 }
 footer{
     grid-area: footer;
