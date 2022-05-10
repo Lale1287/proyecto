@@ -7,17 +7,21 @@ body{
 }
 header{
     grid-area: header;
+    background-color: darkseagreen;
 }
 nav{
     grid-area: menu;
+    background-color: darkkhaki;
 }
 main{
     grid-area: contenido;
+    display: grid;
     grid-template-areas:    "descripcion"
                             "imagen";
 }
 .presentacion{
     grid-area: descripcion; 
+    background-color: darkslateblue;
 }
 section img{
     grid-area: imagen;
