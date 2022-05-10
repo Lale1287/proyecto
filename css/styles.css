@@ -14,6 +14,7 @@ nav{
 }
 section{
     grid-area: parrafo;
+    grid-template-columns: 1fr 2fr;
 }
 footer{
     grid-area: footer;
