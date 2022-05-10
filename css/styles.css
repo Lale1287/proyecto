@@ -1,4 +1,9 @@
 body{
-    background-color: blue;
+    background-color: darksalmon;
     display: grid;
+}
+section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
 }
