@@ -22,9 +22,13 @@ main{
 .presentacion{
     grid-area: descripcion; 
     background-color: darkslateblue;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    color:blanchedalmond;
 }
 section img{
     grid-area: imagen;
+    width: 100%;;
 }
 footer{
     grid-area: footer;
