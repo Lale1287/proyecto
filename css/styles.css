@@ -1,13 +1,20 @@
 body{
     background-color: darksalmon;
     display: grid;
+    grid-template-areas:    "header header"
+                            "menu parrafo"
+                            "imagen imagen"
+                            "footer footer";
 }
-section > .presentacion{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 2rem;
+header{
+    grid-area: header;
+}
+section .presentacion{
+    grid-area: parrafo;
 }
 section > img{
-    grid-column-start: 1;
-    grid-column-end: 2;
+    grid-area: imagen;
+}
+footer{
+    grid-area: footer;
 }
