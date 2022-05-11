@@ -8,10 +8,32 @@ body{
 header{
     grid-area: header;
     background-color: darkseagreen;
+    text-align: center;
 }
 nav{
     grid-area: menu;
     background-color: darkkhaki;
+}
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+nav ul li{
+    border: 2px solid royalblue;
+    border-bottom: none;
+    padding: 5%;
+    text-align: center;
+}
+nav ul li:last-child{
+    border-bottom: 2px solid royalblue;
+}
+nav ul li:hover{
+    background-color: darkgoldenrod;
+}
+nav a{
+    text-decoration: none;
 }
 main{
     grid-area: contenido;
