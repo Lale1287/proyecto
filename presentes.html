@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+	<meta name="viewport" content="initial-scale=1, height=device-height">
+	<title> Presentes </title>
+    <link rel="stylesheet" href="css/styles_presentes.css" type="text/css"> 
+	<link rel="icon" href="img/wlan.png" />
+</head>
+<body>
+    <section class="intro">
+        <img src="img/wlan.png"/>
+        <script>
+            let fechaHoy = document.createTextNode('10/05/2022');
+            let horaActual = document.createTextNode('12:50');
+            let fecha = document.createElement('h1');
+            let hora = document.createElement('h1');
+            fecha.appendChild(fechaHoy);
+            hora.appendChild(horaActual);
+            const int = document.querySelector('.intro');
+            int.appendChild(fecha);
+            int.appendChild(hora);
+        </script>
+    </section>
+    <section class="lista">
+        <ol>
+            <li>Perez Juan</li>
+            <li>Gomez Julia</li>
+            <li>Aberti Bruno</li>
+            <li>Velazquez Fatima</li>
+            <li>Benitez Camila</li>
+            <li>Colombo Esteban</li>
+            <li>Gimenez Sebastian</li>
+            <li>Lopez Juan Martin</li>
+            <li>Sanchez Maria Soledad</li>
+            <li>Hernandez Ana</li>
+            <li>Quieto Justina</li>
+        </ol>
+    </section>
+</body>
+</html>
