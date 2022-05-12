@@ -6,7 +6,7 @@
 	    <title>Registro de usuarios</title> 
         <link rel="stylesheet" href="css/styles_registro.css">
         <link rel="icon" href="img/wlan.png" />
-        <!-- <script src="js/validaciones.js"></script> --> 
+        <script src="js/validaciones.js"></script> 
     </head>
     <body>
        	<header>
@@ -42,7 +42,7 @@
                 
                 <!-- Botones del formulario -->
                 <div class="form-group">
-                    <input type="submit" class="btn btn-primary" value="Enviar">
+                    <input type="submit" class="btn btn-primary" value="Enviar" onsubmit="validar()">
                     <input type="reset" class="btn btn-primary" value="Reiniciar">
                     <a type="button" class="btn btn-primary" onClick="goBack();">Cancelar</a>
                 </div>              
