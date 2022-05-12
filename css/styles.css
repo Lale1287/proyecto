@@ -5,7 +5,7 @@ body{
                             "menu contenido"
                             "footer footer";
     grid-template-columns: 1fr 80%;
-    grid-template-rows: 90% 1fr;
+    grid-template-rows: 1fr 80% 1fr;
     position: absolute;
     min-height: 100%;
     width: 100%;

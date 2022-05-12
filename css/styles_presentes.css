@@ -5,7 +5,7 @@ body{
 							"lista info"
 							"footer footer";
 	grid-template-columns: 80% 1fr;
-	grid-template-rows: 90% 1fr;
+	grid-template-rows: 1fr 80% 1fr;
 	align-items: center;
 	color: #FFFFFF;
 	font-size: large;
