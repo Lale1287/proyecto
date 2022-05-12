@@ -1,0 +1,59 @@
+body{
+	background-color: #092346;
+	display: grid;
+	grid-template-areas: 	"header"
+							"formulario"
+							"footer";
+	grid-template-rows: 1fr 80% 1fr;
+	align-items: center;
+	color: #FFFFFF;
+	font-size: large;
+	position: absolute;
+	width: 100%;
+	min-height: 100%;
+	margin: 0;
+}
+header{
+	grid-area: header;
+	background-color: darkblue;
+	text-align: center;
+}
+main{
+    grid-area: formulario;
+    display: flex;
+    justify-content: center;
+}
+form{
+    border: 2px solid darksalmon;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.form-group{
+    margin: 1%;
+}
+footer{
+	grid-area: footer;
+	background-color: blueviolet;
+	text-align: center;
+	
+}
+footer button{
+	background-color: cornflowerblue;
+	height: 40px;
+	width: 30%;
+	font-size: large;
+	cursor: pointer;
+}
+@media (max-width:1100px) {
+	.container{
+		display: inherit;
+	}
+	.intro {
+		margin-left: -4%;
+	}
+	.intro img {
+  		visibility:hidden;
+	}
+}
