@@ -4,6 +4,12 @@ body{
     grid-template-areas:    "header header"
                             "menu contenido"
                             "footer footer";
+    grid-template-columns: 1fr 80%;
+    grid-template-rows: 90% 1fr;
+    position: absolute;
+    min-height: 100%;
+    width: 100%;
+    margin: 0;
 }
 header{
     grid-area: header;
@@ -31,22 +37,36 @@ nav ul li:last-child{
 }
 nav ul li:hover{
     background-color: darkgoldenrod;
+    cursor: pointer;
 }
 nav a{
     text-decoration: none;
 }
 main{
     grid-area: contenido;
-    display: grid;
-    grid-template-areas:    "descripcion"
-                            "imagen";
-}
-.presentacion{
-    grid-area: descripcion; 
     background-color: darkslateblue;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+}
+main section{
     color:blanchedalmond;
+    display: grid;
+    grid-template-areas:    "bienvenida descripcion"
+                            "imagen imagen";
+    height: 100%;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 80%;
+}
+.presentacion .bienv{
+    grid-area: bienvenida;
+    font-weight: bolder;
+    font-size: larger;
+}
+.presentacion .det{
+    grid-area: descripcion;
+    font-size: large;
+}
+.presentacion p{
+    text-align: center;
+    margin: 3rem 2rem;
 }
 section img{
     grid-area: imagen;
@@ -54,4 +74,8 @@ section img{
 }
 footer{
     grid-area: footer;
+    text-align: center;
+    background-color: cornflowerblue;
+    width: 100%;
+    font-size: large;
 }
