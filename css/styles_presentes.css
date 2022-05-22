@@ -11,7 +11,7 @@ body{
 	font-size: large;
 	position: absolute;
 	width: 100%;
-	min-height: 100%;
+	height: 100%;
 	margin: 0;
 }
 header{
@@ -22,40 +22,45 @@ header{
 .lista{
 	grid-area: lista;
 	background-color:#092346;
-	height: 80%;
-	/*width: 80%;*/
+	height: 100%;
+	width: 100%;
 	position: relative;
 	/*max-height: 100%;*/
+	margin: 0;
+	padding: 0;
 }
 ol {
 	counter-reset: item;
 	font-weight: bold;
 	/*padding-right: 30%;*/
 	display: flex;
-	flex-flow: wrap column;
-	height: inherit;
+	/*flex-flow: wrap column;*/
 	align-content: center;
 	/*position: relative;
-	margin: 0;*/
-	padding: 0;
+	margin: 0;
+	padding: 0;*/
+	flex-wrap: wrap;
+	width: 90%;
+	height: 90%;
 }
 li{
 	list-style: none;
 	position: relative;
 	/*display: block;*/
-	padding: 0.5% 150px 0.5% 35px;
-	margin: 5px 10px;
+	padding: 0 0 0.5rem 3rem;
+	margin: 0.7rem auto;
 	background: #FFFFFF;
 	color: #092346;
 	border-radius: 10px;
-	/*flex: 1 1 auto;*/
-	width: 25%;
+	flex: 0 0 20rem;
+	/*width: 15em;*/
+	height: 1rem;
 }
 li:before{
 	content: counter(item);
 	counter-increment: item;
 	position: absolute;
-	left: -4%;
+	left: -1%;
 	/*top: -10%;*/
 	margin-top: -3%;
 	background: #87CEEB;
@@ -68,6 +73,9 @@ li:before{
 	color:#FFFFFF;
 	/*padding-top: 2px;*/
 	font-weight: bold;
+}
+li p{
+	margin: 0;
 }
 .intro{
 	grid-area: info;
