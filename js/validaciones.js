@@ -4,32 +4,41 @@ document.addEventListener('DOMContentLoaded', function () {
     formulario.addEventListener('submit', function validar(evento) {
         evento.preventDefault();
         var nom = document.querySelector('#name').value;
-        if (hasNumbers(nom)) {
-            document.querySelector('#name').insertAdjacentHTML('afterend', "<p>No ingresaste un nombre válido</p>");
-            document.querySelector('#name').focus();
-            return false;
-        }
-        var ape = document.querySelector('#lastname').value;
-        if (hasNumbers(ape)) {
-            document.querySelector('#lastname').insertAdjacentHTML('afterend', "<p>No ingresaste un apellido válido</p>");
-            document.querySelector('#lastname').focus();
-            return false;
-        }
-        var mail = document.querySelector('#mail').value;
-        if (!isEmail(mail)) {
-            document.querySelector('#mail').insertAdjacentHTML('afterend', "<p>No ingresaste un email válido</p>");
-            document.querySelector('#mail').focus();
-            return false;
-        }
-        var tel = document.querySelector('#phone').value;
-        if (isNaN(tel)) {
-            document.querySelector('#phone').insertAdjacentHTML('afterend', "<p>No ingresaste un número válido</p>");
-            document.querySelector('#phone').focus();
-            //    $("<div class='alert alert-danger'></div>").html("Debes ingresar s&oacute;lo n&oacute;meros").appendTo(".phone");
-        //   $(".alert").delay(3000).fadeOut('slow');
-            return false;
-        }
-        this.submit();
+		var ape = document.querySelector('#lastname').value;
+		var mail = document.querySelector('#mail').value;
+		var tel = document.querySelector('#phone').value;
+		if(validarCampoVac(nom)&validarCampoVac(ape)&validarCampoVac(mail)&validarCampoVac(tel)){
+			if (hasNumbers(nom)) {
+				document.querySelector('#name').focus();
+				document.querySelector('#name').insertAdjacentHTML('afterend', "<p id='error1'>No ingresaste un nombre válido</p>");
+				setTimeout(() => { document.querySelector('#error1').style.display = 'none'; }, 4000);
+				return false;
+			}
+			if (hasNumbers(ape)) {
+				document.querySelector('#lastname').focus();
+				document.querySelector('#lastname').insertAdjacentHTML('afterend', "<p id='error2'>No ingresaste un apellido válido</p>");
+				setTimeout(() => { document.querySelector('#error2').style.display = 'none'; }, 4000);
+				return false;
+			}
+			if (!isEmail(mail)) {
+				document.querySelector('#mail').focus();
+				document.querySelector('#mail').insertAdjacentHTML('afterend', "<p id='error3'>No ingresaste un email válido</p>");
+				setTimeout(() => { document.querySelector('#error3').style.display = 'none'; }, 4000);
+				return false;
+			}
+			if (isNaN(tel)) {
+				document.querySelector('#phone').focus();
+				document.querySelector('#phone').insertAdjacentHTML('afterend', "<p id='error4'>No ingresaste un número válido</p>");
+				setTimeout(() => { document.querySelector('#error4').style.display = 'none'; }, 4000);
+				return false;
+			}
+			if(confirmarAccion()){
+				this.submit();
+				alert('Info Enviada!')
+			}
+		} else{
+			alert("Todos los campos deben estar completos");
+		}
     });
 });
 //function goBack() {
@@ -76,9 +85,7 @@ function validarNum(campo) {
 }
 
 function validarCampoVac(campo){
-	var valor = document.getElementById(campo).value;
-	if(valor == null || valor == 0 || /^\s+$/.test(valor) ) {
-		alert("Todos los campos deben estar completos");
+	if(campo == null || campo == 0 || /^\s+$/.test(campo) ) {
  		return false;
  	} else {
  		return true;
@@ -86,7 +93,7 @@ function validarCampoVac(campo){
 }
 
 function confirmarAccion () {
-	if(confirm("¿Segur@?")){
+	if(confirm("¿Estás Segur@?")){
 		return true;
 	} else {
 		return false;
