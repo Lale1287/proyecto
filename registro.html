@@ -29,17 +29,31 @@
                     <label for="mail" class="col-sm-2 control-label">E-mail</label>
                     <input type="text" class="form-control" id="mail" name="mail"/>
                 </div>
-                <!-- Teléfono del usuario -->
-                <div class="form-group phone">
-                    <label for="phone" class="col-sm-2 control-label">Tel&eacute;fono</label>
+                 <!-- Teléfono del usuario -->
+                 <div class="form-group phone">
+                    <label for="phone" class="col-sm-2 control-label">Teléfono</label>
                     <input type="tel" class="form-control" id="phone" name="phone" placeholder="S&oacute;lo n&uacute;meros"/>
+                </div>
+                <!-- Categoria del usuario -->
+                <div class="form-group category">
+                    <label for="category" class="col-sm-2 control-label">Categoría</label>
+                    <select class="form-control" id="category" name="category">
+                        <option value="" selected>-----</option>
+                        <option value="becarios">Becarios</option>
+                        <option value="cpa">CPA</option>
+                        <option value="investigadores">Investigadores</option>
+                    </select>
                 </div>
                 <!-- Contraseña del usuario -->
                 <div class="form-group">
                     <label for="password" class="col-sm-2 control-label">Clave</label>
-                    <input type="password" class="form-control" id="password" name="password"/>
+                    <input type="password" class="form-control pass" id="password" name="password"/>
                 </div>
-                
+                <!-- Repetir contraseña del usuario -->
+                <div class="form-group">
+                    <label for="password" class="col-sm-2 control-label">Repetir Clave</label>
+                    <input type="password" class="form-control pass" id="repassword" name="repassword"/>
+                </div>
                 <!-- Botones del formulario -->
                 <div class="form-group">
                     <input type="submit" class="btn" value="Enviar" onsubmit="validar()">

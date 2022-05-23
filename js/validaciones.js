@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		var ape = document.querySelector('#lastname').value;
 		var mail = document.querySelector('#mail').value;
 		var tel = document.querySelector('#phone').value;
+		var cat = document.querySelector('#category').value;
+		var pass = document.querySelector('#password').value;
+		var repass = document.querySelector('#repassword').value;
 		if(validarCampoVac(nom)&validarCampoVac(ape)&validarCampoVac(mail)&validarCampoVac(tel)){
 			if (hasNumbers(nom)) {
 				document.querySelector('#name').focus();
@@ -30,6 +33,18 @@ document.addEventListener('DOMContentLoaded', function () {
 				document.querySelector('#phone').focus();
 				document.querySelector('#phone').insertAdjacentHTML('afterend', "<small id='error4' class='error'>No ingresaste un número válido</small>");
 				setTimeout(() => { document.querySelector('#error4').style.display = 'none'; }, 4000);
+				return false;
+			}
+			if(!validarCampoVac(cat)){
+				document.querySelector('#category').focus();
+				document.querySelector('#category').insertAdjacentHTML('afterend', "<small id='error5' class='error'>Tenés que seleccionar una</small>");
+				setTimeout(() => { document.querySelector('#error5').style.display = 'none'; }, 4000);
+				return false;
+			}
+			if(!(pass===repass)){
+				document.querySelector('#repassword').focus();
+				document.querySelector('#repassword').insertAdjacentHTML('afterend', "<small id='error6' class='error'>Las contraseñas deben coincidir</small>");
+				setTimeout(() => { document.querySelector('#error6').style.display = 'none'; }, 4000);
 				return false;
 			}
 			if(confirmarAccion()){
@@ -59,26 +74,14 @@ function hasNumbers(aString) {
 
 function validarN(campo){
 	if (validarCampoVac(campo)){
-		elemento = document.getElementById(campo).value; //Busca el valor que contiene el campo con el id recibido por parametro
-		for (var i = 0, len = elemento.length; i < len; i++) { //itero sobre el string del elemento
-			var key = elemento[i];
+		for (var i = 0, len = campo.length; i < len; i++) { //itero sobre el string del elemento
+			var key = campo[i];
 			var tecla = key.toLowerCase(); //cada letra presionada, en minuscula	
 			var perm="áéíóúabcdefghijklmnñopqrstuvwxyz";
 			if(perm.indexOf(tecla)==-1 ){ //evalua si una cadena esta dentro de otra, si esta en los valores permitidos.
         			alert("Solo formato de texto");
            			return false; //si no esta en los caracteres permitidos.
         		} 
-		}
-		return true;
-	}
-}
-
-function validarNum(campo) {
-	if(validarCampoVac(campo)){
-		var num = document.getElementById(campo).value;
-		if (isNaN(num) || num <= 0 ) {
-			alert ("Solo formato num&eacute;rico"); 
-			return false;
 		}
 		return true;
 	}
