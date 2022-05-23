@@ -10,25 +10,25 @@ document.addEventListener('DOMContentLoaded', function () {
 		if(validarCampoVac(nom)&validarCampoVac(ape)&validarCampoVac(mail)&validarCampoVac(tel)){
 			if (hasNumbers(nom)) {
 				document.querySelector('#name').focus();
-				document.querySelector('#name').insertAdjacentHTML('afterend', "<p id='error1'>No ingresaste un nombre válido</p>");
+				document.querySelector('#name').insertAdjacentHTML('afterend', "<small id='error1' class='error'>No ingresaste un nombre válido</small>");
 				setTimeout(() => { document.querySelector('#error1').style.display = 'none'; }, 4000);
 				return false;
 			}
 			if (hasNumbers(ape)) {
 				document.querySelector('#lastname').focus();
-				document.querySelector('#lastname').insertAdjacentHTML('afterend', "<p id='error2'>No ingresaste un apellido válido</p>");
+				document.querySelector('#lastname').insertAdjacentHTML('afterend', "<small id='error2' class='error'>No ingresaste un apellido válido</small>");
 				setTimeout(() => { document.querySelector('#error2').style.display = 'none'; }, 4000);
 				return false;
 			}
 			if (!isEmail(mail)) {
 				document.querySelector('#mail').focus();
-				document.querySelector('#mail').insertAdjacentHTML('afterend', "<p id='error3'>No ingresaste un email válido</p>");
+				document.querySelector('#mail').insertAdjacentHTML('afterend', "<small id='error3' class='error'>No ingresaste un email válido</small>");
 				setTimeout(() => { document.querySelector('#error3').style.display = 'none'; }, 4000);
 				return false;
 			}
 			if (isNaN(tel)) {
 				document.querySelector('#phone').focus();
-				document.querySelector('#phone').insertAdjacentHTML('afterend', "<p id='error4'>No ingresaste un número válido</p>");
+				document.querySelector('#phone').insertAdjacentHTML('afterend', "<small id='error4' class='error'>No ingresaste un número válido</small>");
 				setTimeout(() => { document.querySelector('#error4').style.display = 'none'; }, 4000);
 				return false;
 			}
