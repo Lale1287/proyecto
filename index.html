@@ -6,16 +6,23 @@
     <title>Proyecto CAC2022</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="img/wlan.png" />
+    
 </head>
 <body>
     <header><h1>INTRANET</h1></header>
-    <nav>
-        <ul>
+    <button id="button-menu" class="button-menu">
+        <span class="linea1"></span>
+        <span class="linea2"></span>
+        <span class="linea3"></span>
+    </button>
+    <nav id="navMenu" class="navMenu">
+        <ul class="nav-links">
             <li><a href="presentes.html">PRESENTES</a></li>
             <li>RESERVAS</li>
             <li><a href="registro.html">REGISTRO</a></li>
         </ul>
     </nav>
+    <script src="js/menuhamb.js"></script>
     <main>
         <section class="presentacion">
             <p class="bienv">Estás en la intranet del Ifly!</p>
