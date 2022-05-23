@@ -1,3 +1,6 @@
+html{
+	height: 100vh;
+}
 body{
 	background-color: #092346;
 	display: grid;
@@ -5,7 +8,7 @@ body{
 							"lista info"
 							"footer footer";
 	grid-template-columns: 80% 1fr;
-	grid-template-rows: 1fr 80% 1fr;
+	grid-template-rows: 1fr 10fr auto;
 	align-items: center;
 	color: #FFFFFF;
 	font-size: large;

@@ -1,13 +1,17 @@
+html{
+    margin: 0;
+    height: 100vh;
+}
 body{
     background-color: darksalmon;
     display: grid;
-    grid-template-areas:    "header header"
-                            "menu contenido"
-                            "footer footer";
-    grid-template-columns: 1fr 80%;
-    grid-template-rows: 1fr 80% 1fr;
+    grid-template-areas:    "header"
+                            "contenido"
+                            "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 10fr auto;
     position: absolute;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     margin: 0;
     align-items: center;
@@ -17,17 +21,24 @@ header{
     background-color: darkseagreen;
     text-align: center;
 }
+nav{
+    grid-area: contenido-start;
+    width: 20%;
+    height: 100%;
+}
 #button-menu{
     width: 30px;
     height: 30px;
     background-color: red;
     cursor: pointer;
     position: absolute;
-    top: 10%;
+    top: 5rem;
     display: flex;
     flex-direction: column;
+    z-index: 100;
 }
 #button-menu span{
+    grid-area: menu;
     display: block;
     width: 100%;
     height: 2px;
@@ -47,23 +58,31 @@ header{
 .active-linea3{
     transform: rotate(-45deg) translate(4px, 1px);
 }
-.navMenu.menu-active{
-    transform: translateX(0%);
+.nav-links.menu-active{
+    grid-area: contenido-start;
+    visibility: visible;
+    width: 100%;
 }
-nav{
+/*nav{
     grid-area: menu;
     background-color: darkkhaki;
     height: 100%;
     display: flex;
     align-items: flex-start;
-    transform: translateX(-100%);
-    margin-top: 23%;
-}
+    transform: translateX(0%);
+    visibility: hidden;
+}*/
 nav ul{
     list-style: none;
     margin: 0;
     padding: 0;
     width: 100%;
+    background-color: darkkhaki;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(0%);
+    visibility: hidden;
 }
 nav ul li{
     border: 2px solid royalblue;
