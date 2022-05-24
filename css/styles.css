@@ -1,6 +1,7 @@
 html{
     margin: 0;
     height: 100vh;
+    font-family: 'Lato',sans-serif;
 }
 body{
     background-color: darksalmon;
