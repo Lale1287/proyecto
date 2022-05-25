@@ -129,6 +129,7 @@ main{
     width: 100%;
     justify-content: space-around;
     height: 25%;
+    margin-top: -2%;
 }
 .introduccion .bienv{
     font-weight: bolder;
@@ -141,6 +142,8 @@ main{
     box-shadow: 0 0 20px blueviolet;
     border: 2px solid darkblue;
     border-radius: 10%;
+    margin-bottom: -10%;
+    margin-top: 5%;
 }
 .detalle{
     display: flex;
@@ -285,6 +288,9 @@ footer{
     .introduccion iframe{
         width: 75%;
         margin-top: 0;
+    }
+    .introduccion .bienv{
+        width: 100%;
     }
     .detalle{
         margin: 40% 0 30% 4%;
