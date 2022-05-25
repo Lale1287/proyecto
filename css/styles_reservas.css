@@ -1,6 +1,7 @@
 html{
 	height: 100vh;
-    font-family: 'Lato',sans-serif;
+    /*font-family: 'Lato',sans-serif;*/
+    font-family: 'Exo 2', sans-serif;
 }
 body{
 	background-color: #092346;
@@ -24,7 +25,6 @@ header{
 }
 .calendario{
     padding: 0;
-    margin: 0;
     left: 50%;
     margin: 0 0 0 -250px;
     position: relative;

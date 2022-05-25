@@ -1,7 +1,8 @@
 html{
     margin: 0;
     height: 100vh;
-    font-family: 'Lato',sans-serif;
+    /*font-family: 'Lato',sans-serif;*/
+    font-family: 'Exo 2', sans-serif;
 }
 body{
     background-color: darksalmon;
@@ -93,6 +94,8 @@ nav ul li{
     text-align: center;
     background-color: aliceblue;
     opacity: 0.9;
+    display: flex;
+    justify-content: space-around;
 }
 nav ul li:last-child{
     border-bottom: 2px solid royalblue;
@@ -103,37 +106,98 @@ nav ul li:hover{
 }
 nav a{
     text-decoration: none;
+    margin-left: 20%;
+}
+.nav-links i{
+    margin-right: 15%;
 }
 main{
     grid-area: contenido;
     background-color: darkslateblue;
-    height: 100%;
-}
-main section{
     color:blanchedalmond;
-    display: grid;
-    grid-template-areas:    "bienvenida descripcion"
-                            "imagen imagen";
     height: 100%;
+    /*display: grid;
+    grid-template-areas:    "intro intro"
+                            "musica contacto";
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 80%;
+    grid-template-rows: 1fr 80%;*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.presentacion{
+    grid-area: intro;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
 }
 .presentacion .bienv{
-    grid-area: bienvenida;
     font-weight: bolder;
     font-size: larger;
 }
 .presentacion .det{
-    grid-area: descripcion;
     font-size: large;
 }
 .presentacion p{
     text-align: center;
     margin: 3rem 2rem;
 }
+.music{
+    /*grid-area: musica;*/
+    width: 30%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+.contact{
+    /*grid-area: contacto;*/
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
 section img{
-    grid-area: imagen;
+    /*grid-area: imagen;*/
     width: 100%;
+}
+form{
+    border: 2px solid darksalmon;
+	width: 40%;
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	padding: 1%;
+    align-self: center;
+    margin-bottom: 5%;
+}
+.form-item{
+    margin: 2%;
+	display: flex;
+	flex-direction: column;
+}
+.form-item label{
+	padding-right: 5%;
+}
+form small{
+    text-align: end;
+}
+.error{
+	color: red;
+	position: relative;
+	top: 5px;
+	text-align: right;
+}
+.form-item:last-child{
+	flex-direction: row;
+}
+.btn{
+	width: 50%;
+	margin: 5% 2% 0 2%;
+	font-size: medium;
+	font-weight: bold;
+	padding: 1%;
+	cursor: pointer;
 }
 footer{
     grid-area: footer;

@@ -1,6 +1,6 @@
 html{
 	height: 100vh;
-	font-family: 'Lato',sans-serif;
+	font-family: 'Exo 2', sans-serif;
 }
 body{
 	background-color: #092346;
@@ -35,12 +35,12 @@ form{
 	flex-direction: column;
 	padding: 5%;
 }
-.form-group{
+.form-item{
     margin: 2%;
 	display: flex;
 	flex-direction: column;
 }
-.form-group label{
+.form-item label{
 	padding-right: 5%;
 }
 .error{
@@ -49,8 +49,11 @@ form{
 	top: 5px;
 	text-align: right;
 }
-.form-group:last-child{
+.form-item:last-child{
 	flex-direction: row;
+}
+form small{
+    text-align: end;
 }
 .btn{
 	width: 50%;
@@ -64,6 +67,7 @@ footer{
 	grid-area: footer;
 	background-color: blueviolet;
 	text-align: center;
+	
 }
 footer button{
 	background-color: cornflowerblue;
@@ -71,7 +75,6 @@ footer button{
 	width: 30%;
 	font-size: large;
 	cursor: pointer;
-	font-family: 'Lato',sans-serif;
 }
 @media (max-width:1100px) {
 	.container{

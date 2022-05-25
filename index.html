@@ -6,7 +6,12 @@
     <title>Proyecto CAC2022</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="img/wlan.png" />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" integrity="sha512-8Vtie9oRR62i7vkmVUISvuwOeipGv8Jd+Sur/ORKDD5JiLgTGeBSkI3ISOhc730VGvA5VVQPwKIKlmi+zMZ71w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d342877dad.js" crossorigin="anonymous"></script>
+    <script src="js/validacionesContact.js"></script> 
 </head>
 <body>
     <header><h1>INTRANET</h1></header>
@@ -18,18 +23,48 @@
         </button>
     
         <ul class="nav-links">
-            <li><a href="presentes.html">PRESENTES</a></li>
-            <li><a href="reservas.html">RESERVAS</a></li>
-            <li><a href="registro.html">REGISTRO</a></li>
+            <li><a href="presentes.html">PRESENTES</a><i class="fa-solid fa-hand"></i></li>
+            <li><a href="reservas.html">RESERVAS</a><i class="fa-solid fa-person-chalkboard"></i></li>
+            <li><a href="registro.html">REGISTRO</a><i class="fa-solid fa-square-pen"></i></li>
         </ul>
     </nav>
     </div>
-    <script src="js/menuhamb.js"></script>
+    <script src="js/menuHamb.js"></script>
     <main>
         <section class="presentacion">
             <p class="bienv">Estás en la intranet del Ifly!</p>
             <p class="det">Podés iniciar sesión con tu usuario (mail) para acceder a los recursos o gestionar tus reservas</p>
-            <img src="img/portada.jpg">
+        </section>
+        <section class="music">
+            <iframe src="https://www.youtube.com/embed/uc2UEfWjvo8?start=22&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+        <section class="contact">
+            <div><p>Tenés algo que decirnos?</p></div>
+            <form class="contact-form" method="post" id="contact-form">
+                <div class="form-item">
+                    <label>Nombre<span>*</span></label>
+                    <input type="text" id="contact-name" name="name"/>
+                </div>
+                <div class="form-item">
+                    <label>E-mail<span>*</span></label>
+                    <input type="text" id="contact-mail" name="mail"/>
+                </div>
+                <div class="form-item">
+                    <label>Asunto<span>*</span></label>
+                    <input type="text" id="contact-issue" name="issue"/>
+                </div>
+                <div class="form-item">
+                    <label>Mensaje<span>*</span></label>
+                    <textarea id="contact-message" name="message"></textarea>
+                </div>
+                <small class="aviso">
+                    <span class="obligatorio"> * </span>los campos son obligatorios.
+                </small>
+                <div class="form-item">
+                    <input type="submit" class="btn" value="Enviar" onsubmit="validarForm()">
+                    <input type="reset" class="btn" value="Reiniciar">
+                </div> 
+            </form>
         </section>
     </main>
     <footer><p>INFORMACIÓN DE CONTACTO</p></footer>

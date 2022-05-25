@@ -41,10 +41,22 @@ document.addEventListener('DOMContentLoaded', function () {
 				setTimeout(() => { document.querySelector('#error5').style.display = 'none'; }, 4000);
 				return false;
 			}
+			if(!validarCampoVac(pass)){
+				document.querySelector('#password').focus();
+				document.querySelector('#password').insertAdjacentHTML('afterend', "<small id='error6' class='error'>Tenés que completar el campo</small>");
+				setTimeout(() => { document.querySelector('#error6').style.display = 'none'; }, 4000);
+				return false;
+			}
+			if(!validarCampoVac(repass)){
+				document.querySelector('#repassword').focus();
+				document.querySelector('#repassword').insertAdjacentHTML('afterend', "<small id='error7' class='error'>Tenés que completar el campo</small>");
+				setTimeout(() => { document.querySelector('#error7').style.display = 'none'; }, 4000);
+				return false;
+			}
 			if(!(pass===repass)){
 				document.querySelector('#repassword').focus();
-				document.querySelector('#repassword').insertAdjacentHTML('afterend', "<small id='error6' class='error'>Las contraseñas deben coincidir</small>");
-				setTimeout(() => { document.querySelector('#error6').style.display = 'none'; }, 4000);
+				document.querySelector('#repassword').insertAdjacentHTML('afterend', "<small id='error8' class='error'>Las contraseñas deben coincidir</small>");
+				setTimeout(() => { document.querySelector('#error8').style.display = 'none'; }, 4000);
 				return false;
 			}
 			if(confirmarAccion()){
@@ -56,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
     });
 });
+
 //function goBack() {
 //	// history.go(-1);
 //	var dest = path+"/src/common/redirector.php";
