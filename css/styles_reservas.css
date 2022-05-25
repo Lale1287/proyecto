@@ -69,7 +69,7 @@ h2{
 .calendario table{
     border-collapse: collapse;
     box-shadow: 0 0 5px blueviolet;
-    margin: 1%;
+    margin: 0;
 }
 .calendario thead{
     background-color: aliceblue;
