@@ -87,9 +87,9 @@ h2{
 }
 .calendario td{
     border: 1px solid darkblue;
-    height: 71.4px;
+    height: 5rem;
     text-align: center;
-    width: 71.4px;
+    width: 5rem;
 }
 .calendario tbody td{
     cursor: pointer;
@@ -159,4 +159,44 @@ footer button{
 footer button:hover{
     background-color: cornflowerblue;
     color: darkblue;
+}
+@media (max-width:768px) {
+    .calendario{
+        width: 70%;
+    }
+    .calendario td{
+        height: 4rem;
+    }
+}
+@media (max-width:576px) {
+    .calendario{
+        width: 85%;
+    }
+    .calendario .encabezado{
+        margin-top: -5%;
+    }
+    .calendario .pie{
+        margin-top: -1%;
+    }
+}
+@media (max-width:320px) {
+    header{
+        font-size: small;
+    }
+    main{
+        height: 100vh;
+    }
+	.calendario{
+        width: 95%;
+    }
+    .calendario td{
+        height: 3rem;
+    }
+    .calendario .encabezado{
+        margin-top: 5%;
+    }
+    footer{
+        font-size: small;
+        font-weight: initial;
+    }
 }
