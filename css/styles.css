@@ -25,7 +25,7 @@ header{
 }
 nav{
     grid-area: contenido-start;
-    width: 20%;
+    width: 20vw;
     height: 100%;
 }
 #button-menu{
@@ -171,7 +171,7 @@ main{
 }
 form{
     border: 2px solid blueviolet;
-	width: 60%;
+	width: 80%;
 	text-align: left;
 	display: flex;
 	flex-direction: column;
@@ -222,4 +222,75 @@ footer{
     width: 100%;
     font-size: larger;
     font-weight: bold;
+}
+@media (max-width:768px) {
+    nav{
+        width: 40%;
+    }
+	.introduccion{
+        height: 5%;
+    }
+    .introduccion iframe{
+        height: 15vh;
+    }
+    .detalle{
+        width: 48%;
+        margin-left: 4%;
+        font-size: larger;
+    }
+    .contact{
+        width: 47%;
+    }
+}
+@media (max-width:576px) {
+    nav{
+        width: 50%;
+    }
+	.introduccion{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .introduccion .bienv{
+        font-size: x-large;
+        margin-top: 15%;
+    }
+}
+@media (max-width:320px) {
+    header{
+        font-size: small;
+    }
+    #button-menu{
+        top: 4.1rem;
+    }
+    nav{
+        width: 100%;
+    }
+	main{
+        display: flex;
+        flex-direction: column;
+    }
+    .introduccion .bienv{
+        font-size: large;
+        margin-top: 12%;
+    }
+    main .contact,main .detalle{
+        width: 100%;
+    }
+    .introduccion{
+        height: auto;
+    }
+    .introduccion iframe{
+        visibility: hidden;
+    }
+    .detalle{
+        margin: -35% 0 0 0;
+        font-size: initial;
+    }
+    .contact p{
+        font-size: inherit;
+    }
+    footer{
+        font-size: small;
+        font-weight: initial;
+    }
 }
