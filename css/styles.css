@@ -242,19 +242,64 @@ footer{
         width: 47%;
     }
 }
-@media (max-width:576px) {
+@media (max-width:600px) {
+    .introduccion .bienv{
+        font-size: x-large;
+        width: 55%;
+        justify-content: center;
+        margin-right: -5%;
+    }
+    .detalle{
+        font-size: large;
+    }
+    .detalle p i{
+        padding-right: 3%;
+    }
+}
+@media (max-width:379px) {
     nav{
         width: 50%;
     }
-	.introduccion{
+    main{
+        height: 100vh;
+        padding-top: 20%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+    main section{
+        width: 95vw;;
+    }
+    .introduccion{
         flex-direction: column-reverse;
         align-items: center;
+        margin-top: 10%;
     }
     .introduccion .bienv{
-        font-size: x-large;
-        margin-top: 15%;
+        font-size: large;
+        padding-bottom: 5%;
+    }
+    .introduccion iframe{
+        width: 75%;
+        margin-top: 0;
+    }
+    .detalle{
+        margin: 40% 0 30% 4%;
+        font-size: initial;
+        width: 90%;
+    }
+    .contact{
+        width: 100%;
+        margin-top: -20%;
+    }
+    .contact p{
+        font-size: inherit;
+    }
+    form{
+        width: 90%;
     }
 }
+/*
 @media (max-width:320px) {
     header{
         font-size: small;
@@ -268,29 +313,29 @@ footer{
 	main{
         display: flex;
         flex-direction: column;
-    }
-    .introduccion .bienv{
-        font-size: large;
-        margin-top: 12%;
+        height: 80vh;
     }
     main .contact,main .detalle{
         width: 100%;
     }
     .introduccion{
-        height: auto;
+        height: 10%;
+    }
+    .introduccion .bienv{
+        font-size: large;
+        margin-top: 12%;
     }
     .introduccion iframe{
         visibility: hidden;
     }
     .detalle{
-        margin: -35% 0 0 0;
-        font-size: initial;
+        margin: -15% 0 0 0;
     }
-    .contact p{
-        font-size: inherit;
+    .contact{
+        margin-top: 5%;
     }
     footer{
         font-size: small;
         font-weight: initial;
     }
-}
+}*/
