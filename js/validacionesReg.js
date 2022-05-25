@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		var cat = document.querySelector('#category').value;
 		var pass = document.querySelector('#password').value;
 		var repass = document.querySelector('#repassword').value;
-		if(validarCampoVac(nom)&validarCampoVac(ape)&validarCampoVac(mail)&validarCampoVac(tel)){
+		if(validarCampoVac(nom)&validarCampoVac(ape)&validarCampoVac(mail)){
 			if (hasNumbers(nom)) {
 				document.querySelector('#name').focus();
 				document.querySelector('#name').insertAdjacentHTML('afterend', "<small id='error1' class='error'>No ingresaste un nombre válido</small>");

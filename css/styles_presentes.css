@@ -2,16 +2,16 @@ html{
 	height: 100vh;
 	/*font-family: 'Lato',sans-serif;*/
 	font-family: 'Exo 2', sans-serif;
+	color: darkblue;
+	background-color: lavender;
 }
 body{
-	background-color: #092346;
 	display: grid;
 	grid-template-areas: 	"header"
 							"contenido"
 							"footer";
 	grid-template-rows: 1fr 10fr auto;
 	align-items: center;
-	color: #FFFFFF;
 	font-size: large;
 	position: absolute;
 	width: 100%;
@@ -20,18 +20,18 @@ body{
 }
 header{
 	grid-area: header;
-	background-color: darkblue;
+	background-color: lightsteelblue;
 	text-align: center;
 }
 main{
 	grid-area: contenido;
+	background-color: lavender;
 	display: grid;
 	grid-template-areas: "lista info";
 	grid-template-columns: 80vw auto;
 	align-items: center;
 }
 .lista{
-	background-color:#092346;
 	height: 80vh;
 	width: 100%;
 	position: relative;
@@ -65,8 +65,8 @@ li{
 	/*display: block;*/
 	padding: 0 0 0.5rem 3rem;
 	margin: 0.7rem;
-	background: #FFFFFF;
-	color: #092346;
+	background: aliceblue;
+	color: darkblue;
 	border-radius: 10px;
 	/*flex: 0 1 auto;*/
 	width: 20rem;
@@ -80,14 +80,14 @@ li:before{
 	left: -1%;
 	/*top: -10%;*/
 	margin-top: -3%;
-	background: #87CEEB;
+	background-color: blueviolet;
 	height: 35px;
 	width: 35px;
 	line-height: 190%;	
-	border: 3px solid #FFFFFF;
+	border: 3px solid aliceblue;
 	text-align: center;
 	border-radius: 20px;
-	color:#FFFFFF;
+	color:aliceblue;
 	/*padding-top: 2px;*/
 	font-weight: bold;
 }
@@ -95,7 +95,6 @@ li p{
 	margin: 0;
 }
 .intro{
-	background-color: cadetblue;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
@@ -105,8 +104,8 @@ li p{
 .intro img{
 	width: 50%;
 	border-radius: 10px;
-	box-shadow: 0 0 10px #FFFFFF;
-	padding: 20px;
+	box-shadow: 0 0 15px blueviolet;
+	padding: 20%;
 	margin: 10%;
 	/*animation: notification 2s infinite;*/
 }
@@ -122,17 +121,30 @@ li p{
 }
 footer{
 	grid-area: footer;
-	background-color: blueviolet;
+	background-color: lightsteelblue;
 	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+footer a{
+	width: 100%;
+	margin: 0.5%;
 }
 footer button{
-	background-color: cornflowerblue;
+	background-color: darkblue;
+	color: aliceblue;
 	height: 40px;
 	width: 30%;
 	font-size: large;
 	cursor: pointer;
 	/*font-family: 'Lato',sans-serif;*/
 	font-family: 'Exo 2', sans-serif;
+	box-shadow: 0 0 2px blueviolet;
+	border-color: skyblue;
+}
+footer button:hover{
+    background-color: cornflowerblue;
+    color: darkblue;
 }
 @media (max-width:1100px) {
 	.container{

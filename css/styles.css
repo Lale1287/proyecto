@@ -3,9 +3,9 @@ html{
     height: 100vh;
     /*font-family: 'Lato',sans-serif;*/
     font-family: 'Exo 2', sans-serif;
+    color: darkblue;    
 }
 body{
-    background-color: darksalmon;
     display: grid;
     grid-template-areas:    "header"
                             "contenido"
@@ -20,7 +20,7 @@ body{
 }
 header{
     grid-area: header;
-    background-color: darkseagreen;
+    background-color: lightsteelblue;
     text-align: center;
 }
 nav{
@@ -31,7 +31,7 @@ nav{
 #button-menu{
     width: 30px;
     height: 30px;
-    background-color: red;
+    background-color: darkblue;
     cursor: pointer;
     position: absolute;
     top: 5rem;
@@ -43,7 +43,7 @@ nav{
     display: block;
     width: 18px;
     height: 2px;
-    background-color: blue;
+    background-color: aliceblue;
     border-radius: 9999px;
     margin-top: 5.1px;
     transform-origin: 0px 100%;
@@ -88,82 +88,90 @@ nav ul{
     visibility: hidden;
 }
 nav ul li{
-    border: 2px solid royalblue;
+    border: 2px solid blueviolet;
     border-bottom: none;
     padding: 5%;
     text-align: center;
-    background-color: aliceblue;
+    background-color: darkblue;
     opacity: 0.9;
     display: flex;
     justify-content: space-around;
+    font-size: large;
+    font-weight: bold;
+    color: aliceblue;
 }
 nav ul li:last-child{
-    border-bottom: 2px solid royalblue;
+    border-bottom: 2px solid blueviolet;
 }
 nav ul li:hover{
-    background-color: darkgoldenrod;
+    background-color: rgb(65, 65, 165);
     cursor: pointer;
 }
 nav a{
     text-decoration: none;
     margin-left: 20%;
+    color: aliceblue;
 }
 .nav-links i{
     margin-right: 15%;
 }
 main{
     grid-area: contenido;
-    background-color: darkslateblue;
-    color:blanchedalmond;
+    background-color: lavender;
     height: 100%;
-    /*display: grid;
-    grid-template-areas:    "intro intro"
-                            "musica contacto";
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 80%;*/
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
-.presentacion{
-    grid-area: intro;
+.introduccion{
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-around;
 }
-.presentacion .bienv{
+.introduccion .bienv{
     font-weight: bolder;
-    font-size: larger;
-}
-.presentacion .det{
-    font-size: large;
-}
-.presentacion p{
-    text-align: center;
-    margin: 3rem 2rem;
-}
-.music{
-    /*grid-area: musica;*/
-    width: 30%;
+    font-size: xx-large;
     display: flex;
     align-self: center;
-    justify-content: center;
+}
+.introduccion iframe{
+    width: 30%;
+    margin-top: 3%;
+    box-shadow: 0 0 20px blueviolet;
+    border: 2px solid darkblue;
+    border-radius: 10%;
+}
+.detalle{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 45%;
+    margin-left: 5%;
+    font-size: x-large;
+}
+.detalle p{
+    margin: 1%;
+    width: 100%;
+}
+.detalle p:first-child{
+    text-decoration: underline double;
+}
+.detalle p i{
+    padding-right: 5%;
 }
 .contact{
-    /*grid-area: contacto;*/
-    width: 70%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     text-align: center;
 }
-section img{
-    /*grid-area: imagen;*/
-    width: 100%;
+.contact p{
+    font-size: larger;
 }
 form{
-    border: 2px solid darksalmon;
-	width: 40%;
+    border: 2px solid blueviolet;
+	width: 60%;
 	text-align: left;
 	display: flex;
 	flex-direction: column;
@@ -179,8 +187,17 @@ form{
 .form-item label{
 	padding-right: 5%;
 }
+.form-item input,.form-item textarea{
+	background-color: aliceblue;
+	border-color: skyblue;
+}
 form small{
     text-align: end;
+    padding-right: 4%;
+}
+form textarea{
+    max-width: -moz-available;
+    height: 5rem;
 }
 .error{
 	color: red;
@@ -202,7 +219,8 @@ form small{
 footer{
     grid-area: footer;
     text-align: center;
-    background-color: cornflowerblue;
+    background-color: lightsteelblue;
     width: 100%;
-    font-size: large;
+    font-size: larger;
+    font-weight: bold;
 }

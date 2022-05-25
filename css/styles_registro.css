@@ -1,16 +1,16 @@
 html{
 	height: 100vh;
 	font-family: 'Exo 2', sans-serif;
+	color: darkblue;
+	background-color: lavender;
 }
 body{
-	background-color: #092346;
 	display: grid;
 	grid-template-areas: 	"header"
 							"formulario"
 							"footer";
 	grid-template-rows: 1fr 10fr auto;
 	align-items: center;
-	color: #FFFFFF;
 	font-size: large;
 	position: absolute;
 	width: 100%;
@@ -19,21 +19,24 @@ body{
 }
 header{
 	grid-area: header;
-	background-color: darkblue;
+	background-color: lightsteelblue;
 	text-align: center;
 }
 main{
     grid-area: formulario;
     display: flex;
     justify-content: center;
+	background-color: lavender;
 }
 form{
-    border: 2px solid darksalmon;
+    border: 2px solid blueviolet;
 	width: 25%;
 	text-align: left;
 	display: flex;
 	flex-direction: column;
-	padding: 5%;
+	padding: 2%;
+	height: 100%;
+	margin: 2% 0 2% 0;
 }
 .form-item{
     margin: 2%;
@@ -42,6 +45,13 @@ form{
 }
 .form-item label{
 	padding-right: 5%;
+}
+.form-item input,.form-item select{
+	background-color: aliceblue;
+	border-color: skyblue;
+}
+.form-item select{
+	cursor: pointer;
 }
 .error{
 	color: red;
@@ -54,6 +64,7 @@ form{
 }
 form small{
     text-align: end;
+	padding-right: 4%;
 }
 .btn{
 	width: 50%;
@@ -65,16 +76,30 @@ form small{
 }
 footer{
 	grid-area: footer;
-	background-color: blueviolet;
+	background-color: lightsteelblue;
 	text-align: center;
-	
+	display: flex;
+	justify-content: center;
+}
+footer a{
+	width: 100%;
+	margin: 0.5%;
 }
 footer button{
-	background-color: cornflowerblue;
+	background-color: darkblue;
+	color: aliceblue;
 	height: 40px;
 	width: 30%;
 	font-size: large;
 	cursor: pointer;
+	/*font-family: 'Lato',sans-serif;*/
+	font-family: 'Exo 2', sans-serif;
+	box-shadow: 0 0 2px blueviolet;
+	border-color: skyblue;
+}
+footer button:hover{
+    background-color: cornflowerblue;
+    color: darkblue;
 }
 @media (max-width:1100px) {
 	.container{

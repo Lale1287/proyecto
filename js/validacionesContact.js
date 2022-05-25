@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		var email = document.querySelector('#contact-mail').value;
 		var issue = document.querySelector('#contact-issue').value;
 		var message = document.querySelector('#contact-message').value;
-		if(validarCampoVac(name)&validarCampoVac(email)&validarCampoVac(issue)&validarCampoVac(message)){
+		if(validarCampoVac(email)&validarCampoVac(issue)&validarCampoVac(message)){
 			if (hasNumbers(name)) {
 				alert('Solo letras');
 				document.querySelector('#contact-name').focus();
@@ -32,8 +32,12 @@ document.addEventListener('DOMContentLoaded', function () {
 				setTimeout(() => { document.querySelector('#errorD').style.display = 'none'; }, 4000);
 				return false;
 			}
+			if(confirmarAccion()){
+				this.submit();
+				alert('Info Enviada!')
+			}
 		} else{
-			alert("Todos los campos deben estar completos");
+			alert("Los campos obligatorios deben estar completos");
 		}
 	});
 });
