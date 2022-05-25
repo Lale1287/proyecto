@@ -79,7 +79,7 @@ h2{
     border-bottom: 2px solid blueviolet;
 }
 .calendario thead td{
-    height: 67.4px;
+    height: 5rem;
 }
 .calendario thead td:first-child{
     border-left: 2px solid blueviolet;
@@ -89,7 +89,7 @@ h2{
 }
 .calendario td{
     border: 1px solid darkblue;
-    height: 5rem;
+    height: 4.5rem;
     text-align: center;
     width: 5rem;
 }
