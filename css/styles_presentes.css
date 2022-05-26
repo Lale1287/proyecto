@@ -50,8 +50,8 @@ ol {
 	/*flex-flow: wrap column;*/
 	align-content: center;
 	/*position: relative;
-	margin: 0;
-	padding: 0;*/
+	margin: 0;*/
+	padding: 0;
 	flex-wrap: wrap;
 	flex-direction: column;
 	/*width: 90%;*/
@@ -167,13 +167,12 @@ footer button:hover{
 		display: flex;
 		flex-direction: column;
 		width: 100vw;
-		margin: -90% 0 0 -45%;
+		margin: -90% 0 0 -25%;
 		align-items: flex-end;
 	}
 	.intro h1{
 	margin: 1% 0 0 5%;
 	font-size: 120%;
-	box-shadow: 0 0 8px blueviolet;
 	border-radius: 5px;
 	padding: 1%;
 	}
@@ -184,14 +183,14 @@ footer button:hover{
 		visibility: hidden;
 	}
 	.lista{
-		align-items: flex-start;
+		align-items: center;
 	}
 	ol{
 		flex-wrap: nowrap;
 	}
 	li{
 		width: 70vw;
-		margin: 0.7rem 0.7rem 0.7rem -5%;
+		margin: 0.7rem 0 0.7rem 0;
 	}
 }
 @media (max-width:320px) {
@@ -199,8 +198,7 @@ footer button:hover{
         font-size: small;
     }
 	.intro{
-		margin-left: 0;
-		align-items: center;
+		margin-right: -4%;
 	}
 	.intro h1{
 		font-size: 100%;
@@ -209,16 +207,18 @@ footer button:hover{
 	.intro h1:last-child{
 		margin-bottom: -5%;
 	}
+	.lista{
+		margin: 0;
+	}
     li{
-		margin-left: -15%;
 		overflow: hidden;
-		height: 2rem;
+		height: 20px;
 	}
 	li::before{
-		margin-top: -1.1%;
-		height: 25px;
-		width: 28px;
-		line-height: 150%;
+		margin-top: -1.2%;
+		height: 28px;
+		width: 30px;
+		line-height: 160%;
 		font-size: 15px;
 	}
     footer{
