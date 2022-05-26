@@ -115,6 +115,7 @@ li p{
 }
 .intro .date p{
 	margin-top: -5%;
+	font-weight: bold;
 }
 .intro .date p:last-child{
 	margin-top: -15%;
