@@ -250,10 +250,14 @@ footer{
         width: 55%;
     }
     .introduccion .bienv{
-        font-size: x-large;
+        font-size: 150%;
         width: 55%;
         justify-content: center;
         margin-right: -5%;
+        text-align: center;
+    }
+    .introduccion iframe{
+        width: 35%;
     }
     .detalle{
         font-size: large;
@@ -262,13 +266,12 @@ footer{
         padding-right: 3%;
     }
 }
-@media (max-width:379px) {
+@media (max-width:435px) {
     nav{
         width: 75%;
     }
     main{
-        height: 100vh;
-        padding-top: 20%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-content: center;
@@ -281,19 +284,17 @@ footer{
         align-items: center;
         margin-top: 10%;
     }
-    .introduccion .bienv{
-        font-size: large;
-        padding-bottom: 5%;
-    }
     .introduccion iframe{
         width: 75%;
         margin-top: 0;
     }
     .introduccion .bienv{
         width: 100%;
+        padding-bottom: 5%;
+        margin: 25% 0 0 0;
     }
     .detalle{
-        margin: 40% 0 30% 4%;
+        margin: 45% 0 20% 2%;
         font-size: initial;
         width: 90%;
     }
@@ -308,43 +309,3 @@ footer{
         width: 90%;
     }
 }
-/*
-@media (max-width:320px) {
-    header{
-        font-size: small;
-    }
-    #button-menu{
-        top: 4.1rem;
-    }
-    nav{
-        width: 100%;
-    }
-	main{
-        display: flex;
-        flex-direction: column;
-        height: 80vh;
-    }
-    main .contact,main .detalle{
-        width: 100%;
-    }
-    .introduccion{
-        height: 10%;
-    }
-    .introduccion .bienv{
-        font-size: large;
-        margin-top: 12%;
-    }
-    .introduccion iframe{
-        visibility: hidden;
-    }
-    .detalle{
-        margin: -15% 0 0 0;
-    }
-    .contact{
-        margin-top: 5%;
-    }
-    footer{
-        font-size: small;
-        font-weight: initial;
-    }
-}*/
