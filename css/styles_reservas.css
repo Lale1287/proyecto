@@ -155,8 +155,9 @@ footer button{
 	cursor: pointer;
 	/*font-family: 'Lato',sans-serif;*/
 	font-family: 'Exo 2', sans-serif;
-	box-shadow: 0 0 2px blueviolet;
+	box-shadow: 0 0 5px blueviolet;
 	border-color: skyblue;
+    transition: background-color 400ms linear;
 }
 footer button:hover{
     background-color: cornflowerblue;
