@@ -131,7 +131,7 @@ main{
     font-size: xx-large;
     display: flex;
     align-self: center;
-    animation: entrada 3s;
+    animation: entrada 1s;
 }
 @keyframes entrada {
     0% {
