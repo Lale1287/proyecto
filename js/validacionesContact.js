@@ -34,7 +34,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 			if(confirmarAccion()){
 				this.submit();
-				alert('Info Enviada!')
+				alert('Info Enviada!');
+				contacto.reset();
+				location.reload();
 			}
 		} else{
 			alert("Los campos obligatorios deben estar completos");
