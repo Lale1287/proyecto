@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			if(confirmarAccion()){
 				this.submit();
 				alert('Info Enviada!');
-				window.location = direccion;
+				window.location.href=direccion;
 			}
 		} else{
 			alert("Todos los campos deben estar completos");
