@@ -1,6 +1,8 @@
 //Validaciones en cliente
 document.addEventListener('DOMContentLoaded', function () {
     const formulario = document.querySelector('#reg-form');
+	const direccion = window.location.pathname;
+	console.log(direccion);
     formulario.addEventListener('submit', function validar(evento) {
         evento.preventDefault();
         var nom = document.querySelector('#name').value;
@@ -61,7 +63,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 			if(confirmarAccion()){
 				this.submit();
-				alert('Info Enviada!')
+				alert('Info Enviada!');
+				window.location = direccion;
 			}
 		} else{
 			alert("Todos los campos deben estar completos");
