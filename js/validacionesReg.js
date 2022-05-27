@@ -2,7 +2,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const formulario = document.querySelector('#reg-form');
 	const direccion = window.location.pathname;
-	console.log(direccion);
     formulario.addEventListener('submit', function validar(evento) {
         evento.preventDefault();
         var nom = document.querySelector('#name').value;
@@ -64,7 +63,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			if(confirmarAccion()){
 				this.submit();
 				alert('Info Enviada!');
-				window.location.href=direccion;
+				formulario.reset();
+				location.reload();
 			}
 		} else{
 			alert("Todos los campos deben estar completos");
